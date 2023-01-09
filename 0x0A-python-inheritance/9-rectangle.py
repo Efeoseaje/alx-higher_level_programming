@@ -28,4 +28,4 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """overrides string representation of Rectangle"""
         rect = "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
-        return
+        return rect
