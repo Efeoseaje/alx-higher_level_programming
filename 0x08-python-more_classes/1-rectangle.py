@@ -5,9 +5,9 @@
 
 class Rectangle:
     """Definition and instantiation of a Rectangle"""
-    def __init__(self, __width=0, __height=0):
-        self.__width = __width
-        self.__height = __height
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
 
     """To retrieve the width"""
     @property
