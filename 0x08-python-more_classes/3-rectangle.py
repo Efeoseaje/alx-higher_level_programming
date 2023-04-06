@@ -50,12 +50,12 @@ class Rectangle:
 
     def __str__(self):
         """return a string representation of a rectangle with character '#' """
-        rectangle = "" 
+        rectangle = ""
         if self.__width == 0 or self.__height == 0:
             return ("")
         for i in range(self.__height):
             for j in range(self.__width):
-                rectangle += "#"  # Append a hash tag 
+                rectangle += "#"  # Append a hash tag
             if i < self.__height - 1:
                 rectangle += "\n"  # Append a new line
         return rectangle
