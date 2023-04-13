@@ -8,7 +8,7 @@ class Student:
 
     def __init__(self, first_name, last_name, age):
         """ Instantiation of a Student
-            
+
             Args:
                 first_name: First name of the student
                 last_name: Last name of the student
