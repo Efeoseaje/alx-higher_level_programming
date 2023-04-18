@@ -90,7 +90,12 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints the rectangle instance with '#' """
-        for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
+        for i in range(self.y):
             print()
+        for i in range(self.height):
+            print(" " * self.x + "#" * self.width)
+
+    def __str__(self):
+        """ Overides the __str__ method """
+        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - \
+{self.width}/{self.height}'
