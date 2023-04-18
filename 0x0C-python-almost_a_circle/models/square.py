@@ -21,9 +21,7 @@ class Square(Rectangle):
             TypeError: If either of x or y is not an int.
             ValueError: If either of x or y < 0.
         """
-        self.size = size
-        self.x = x
-        self.y = y
+
         super().__init__(size, size, x, y, id)
 
     @property
@@ -40,6 +38,45 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.__width = value
         self.__height = value
+
+    @property
+    def x(self):
+        """ Retrieves the x cordinate of the square """
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """ Sets the x cordinate and ensures it gets the right value """
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    @property
+    def y(self):
+        """ Retrieves the y cordinate of the square """
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """ Sets the y cordinate and ensures it gets the right value """
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
+
+    def area(self):
+        """ Calculates the area of the square """
+        return self.__width * self.__height
+
+    def display(self):
+        """ Prints the square instance with '#' """
+        for i in range(self.y):
+            print()
+        for i in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """ Overides the __str__ method """
